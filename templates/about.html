@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} Sobre {% endblock %}</h1></br>
+    <main>
+	  <h2>Criando um Website de Postagens</h2>
+	  <p>Exercício da disciplina "PJI110 - Projeto Integrador em Computação 1</p>
+
+	  <article>
+	    <h3>Tecnologias usadas</h3>
+	    <ul>
+	    	<li>Pyhon 3</li>
+	    	<li>Flask</li>
+	    	<li>Jinja</li>
+	    	<li>Bootstrap</li>
+	    	<li>HTML, JavaScript, CSS</li>
+	    	<li>SQLite 3</li>
+	    	<li>SQL Alchemy</li>
+	    </ul>
+	  </article>
+
+	  <article>
+	    <h2>Etapas das atividades</h2>
+	    <ol>
+	    	<li>Configurar um ambiente de programação</li>
+	    	<li>Instalar as bibliotecas necessárias</li>
+	    	<li>Criar uma aplicação base</li>
+ 			<li>Usar templates HTML</li>
+			<li>Incorporar o Bootstrap</li>
+			<li>Configurar o banco de dados</li>
+			<li>Mostrar todas as postagens</li>
+			<li>Mostrar detalhes de uma postagem</li>
+			<li>Criar uma nova postagem</li>
+			<li>Editar uma postagem existente</li>
+			<li>Apagar uma postagem existente</li>
+	    </ol>
+	  </article>
+
+	  <article>
+	    <h3>Ambiente de proramação</h3>
+	    <p>Importante criar um ambiente isolado de programação (env) para:</p>
+	    <ul>
+	    	<li>Evitar conflitos entre versões</li>
+	    	<li>Organizar melhor as bibliotecas necessárias utilizadas no projeto</li>
+	    	<li>Manter apenas as bibliotecas principais no diretório principal</li>
+	    </ul>
+	  </article>
+
+	  <article>
+	    <h3>Roteiro de estudo</h3>
+	    <p>Em particular para o tema deste PI, indicamos os vídeos (todos de autoria da UNIVESP) de apoio para revisão de conceitos relacionados a HTML, CSS, Fundamentos de Web e modelagem de banco de dados, os quais serão usados nas atividades:</p>
+	    <ul>
+	    	<li><a href="https://www.youtube.com/watch?v=BG61VdSGK8Y">HTML e JSON</a></li>
+	    	<li><a href="https://www.youtube.com/watch?v=IAkJmOCr3VM">Desenvolvimento HTML5 e CSS</a></li>
+	    	<li><a href="https://youtu.be/-HSyOYvksVw">Linguagem SQL</a></li>
+	    	<li><a href="https://youtu.be/y1UHhRVbS6A">Criando um Website para postagens - Parte1</a></li>
+	    	<li><a href="https://youtu.be/ifnfqlq0GBE">Criando um Website para postagens - Parte2</a></li>
+	    </ul>
+	  </article>	  
+	</main>
+
+	<footer id="about" style="height: 65px; text-align: right">
+		<p>&copy; {{ thisyear }} Wecchi</p>
+		<address>contato: <a href="mailto:wecchi@gmail.com">Marcelo</a>
+				, web site: <a href="http://www.wdatascience.com.br">wdatascience</a>
+		</address>
+	</footer>
+{% endblock %}

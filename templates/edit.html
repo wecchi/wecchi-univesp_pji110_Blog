@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} Edição da postagem "{{ post['title'] }}" {% endblock %}</h1>
+    <hr>
+	</br>
+
+	<form method="post">
+	    <div class="form-group">
+	        <label for="title">Título</label>
+	        <input type="text" name="title"
+	               placeholder="Post title" class="form-control"
+	               value="{{ request.form['title'] or post['title'] }}"></input>
+	    </div>
+
+	    <div class="form-group">
+	        <label for="content">Conteúdo</label>
+	        <textarea name="content" placeholder="Post content"
+	        		  style="height: 350px"
+	                  class="form-control">{{ request.form['content'] or post['content'] }}</textarea>
+	    </div>
+	    <div class="form-group">
+	        <button type="submit" class="btn btn-primary">Gravar</button>
+	    </div>
+	</form>
+	<hr>
+	<form action="{{ url_for('delete', post_id=post['id']) }}" method="POST">
+		<input type="submit" value="Apagar"
+				class="btn-danger btn-sm"
+				onclick="return confirm('Tem certeza de que deseja apagar essa Postagem?')">
+	</form>
+{% endblock %}
